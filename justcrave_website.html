@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JustCrave Flavours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  --pink: #ff2e93;
+  --yellow: #ffd60a;
+  --orange: #ff7a00;
+  --teal: #00c2a8;
+  --violet: #7a3cff;
+  --bg: #fff4d6;
+  --ink: #2a0a4a;
+  --banner-text: #ffffff;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #2a0a4a;
+    --ink: #fff4d6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] { --bg: #2a0a4a; --ink: #fff4d6; color-scheme: dark; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+*, *::before, *::after { box-sizing: inherit; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Fredoka", "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+.awning {
+  height: 44px;
+  background: repeating-linear-gradient(90deg, var(--pink) 0 48px, var(--yellow) 48px 96px);
+  border-radius: 0 0 28px 28px;
+}
+.banner {
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, var(--violet), var(--pink) 55%, var(--orange));
+  color: var(--banner-text);
+  text-align: center;
+  border-radius: 32px;
+  border: 6px solid var(--yellow);
+}
+.banner h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 7vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.banner p {
+  margin: 0;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 600;
+}
+main { max-width: 960px; margin: 0 auto; padding: 40px 24px 56px; }
+.lead { text-align: center; font-size: 1.2rem; max-width: 36rem; margin: 0 auto 36px; }
+.scoops { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.scoop {
+  width: 128px; height: 128px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 1.05rem;
+  color: #2a0a4a;
+  text-align: center;
+  padding: 0 12px;
+}
+.scoop:nth-child(1) { background: var(--teal); }
+.scoop:nth-child(2) { background: var(--orange); }
+.scoop:nth-child(3) { background: var(--pink); color: #fff; }
+.scoop:nth-child(4) { background: #7b4a2b; color: #fff; }
+footer { text-align: center; padding: 0 24px 40px; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="awning" aria-hidden="true"></div>
+
+  <header class="banner" role="banner">
+    <h1>Welcome to JustCrave Flavours.</h1>
+    <p>We’re still under construction.</p>
+  </header>
+
+  <main>
+    <p class="lead">Something delicious is on its way. Check back soon for the full menu.</p>
+    <div class="scoops" aria-hidden="true">
+      <div class="scoop">Mint</div>
+      <div class="scoop">Cinnamon</div>
+      <div class="scoop">Strawberry ice</div>
+      <div class="scoop">Wood smoke</div>
+    </div>
+  </main>
+
+  <footer>© JustCrave Flavours</footer>
+</body>
+</html>
